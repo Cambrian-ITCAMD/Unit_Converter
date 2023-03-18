@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:gravity="center"
+            android:textStyle="bold"
             android:layout_gravity="center"
             android:text="@string/Description"
             android:textSize="25sp"/>
@@ -83,18 +84,19 @@
             <!-- An EditText for the user to input a value to be converted -->
             <EditText
                 android:id="@+id/inputValues"
-                android:layout_width="171dp"
+                android:layout_width="168dp"
                 android:layout_height="60sp"
-                android:inputType="numberSigned"
                 android:autofillHints="name"
                 android:hint="@string/Input"
+                android:inputType="numberSigned"
+                android:textStyle="bold"
                 tools:layout_editor_absoluteX="82dp"
                 tools:layout_editor_absoluteY="452dp" />
 
             <!-- This is a text view that displays the text "=". -->
             <TextView
                 android:id="@+id/equal2"
-                android:layout_width="40sp"
+                android:layout_width="52dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="@string/Equals"
@@ -107,7 +109,9 @@
                 android:layout_height="60sp"
                 android:layout_marginStart="65sp"
                 android:text="@string/Result"
+                android:textStyle="bold"
                 android:textSize="20sp"
+                android:gravity="center"
                 tools:layout_editor_absoluteX="82dp"
                 tools:layout_editor_absoluteY="452dp" />
         </LinearLayout>
