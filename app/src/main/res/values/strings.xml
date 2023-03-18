@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Unit Converter</string>
+    <string name="Name">UNIT CONVERTER</string>
+    <string name="Description">Choose Conversion Units</string>
+    <string name="Equals">=</string>
+    <string name="Input">Enter Value</string>
+    <string name="Result">0</string>
+    <string name="ImageDescription">Background Image</string>
+</resources>
