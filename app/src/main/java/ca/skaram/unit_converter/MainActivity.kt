@@ -1,3 +1,6 @@
+// MID TERM - IOT1009
+// Submitted by - Karam Singh
+
 package ca.skaram.unit_converter
 
 import android.R
@@ -19,13 +22,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var input: EditText
 
     // Define conversion factors for each unit
-    private val milesToKm = 1.60934
-    private val kmToM = 1000.0
-    private val mToCm = 100.0
-    private val cmToMm = 10.0
-    private val inToCm = 2.54
-    private val ftToIn = 12.0
-    private val ydToFt = 3.0
+    private val milesToKm : Double = 1.60934
+    private val kmToM : Double = 1000.0
+    private val mToCm : Double = 100.0
+    private val cmToMm : Double = 10.0
+    private val inToCm : Double = 2.54
+    private val ftToIn : Double = 12.0
+    private val ydToFt : Double = 3.0
 
     // The onCreate function is called when the activity is first created
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -80,6 +83,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun updateOutput() {
+        // Get the input value and selected units
+        val inputValue = input.text.toString().toDoubleOrNull() ?: 0.0
+        val fromUnit = binding.unitsSpinner1.selectedItem.toString()
+        val toUnit = binding.unitsSpinner2.selectedItem.toString()
+
+        // Convert the units and update the output text view
+        val outputValue = unitConversions(inputValue, fromUnit, toUnit)
+        output.text = outputValue.toString()
+        displayMessage(inputValue, fromUnit, toUnit)
+    }
+
     // This function converts the input value from the "fromUnit" to the "toUnit" and returns the result
     private fun unitConversions(value: Double, fromUnit: String, toUnit: String): Double {
 
@@ -114,17 +129,5 @@ class MainActivity : AppCompatActivity() {
     private fun displayMessage(result: Double, fromUnit: String, toUnit: String) {
         val message = "$result $fromUnit has been converted to $toUnit\n Look for Output in App"
         Log.d("toUnit", message)
-    }
-
-    private fun updateOutput() {
-        // Get the input value and selected units
-        val inputValue = input.text.toString().toDoubleOrNull() ?: 0.0
-        val fromUnit = binding.unitsSpinner1.selectedItem.toString()
-        val toUnit = binding.unitsSpinner2.selectedItem.toString()
-
-        // Convert the units and update the output text view
-        val outputValue = unitConversions(inputValue, fromUnit, toUnit)
-        output.text = outputValue.toString()
-        displayMessage(inputValue, fromUnit, toUnit)
     }
 }

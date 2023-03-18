@@ -5,8 +5,22 @@ Creates a conversion app using the Android Studio project. It is based on follow
 - 1 output field (TextView)
 - Spinners to select the conversion
 - An appropriate layout
- *
- *
+ * Uses a constraint layout as a main xml layout.
+ * Constraint layout contains 3 linear layouts embedded in it.
+ * These linear layout has palettes like TextViews, Spinners, EditText, and ImageView
+
+- So far efficient to make conversion on length units such as:
+ * Miles
+ * Kilometer
+ * Meter
+ * Centimeter
+ * Millimeter
+ * Yards
+ * Feet
+
+- No restrictions or limitations on conversion for above mentioned units.  
+- Values can be converted to and fro from above available units according to the user need.
+
 Initially appeared on
 [gist](https://github.com/Cambrian-ITCAMD/Unit_Converter.git).
 
@@ -28,7 +42,7 @@ details
 ## Acknowledgments
 
 - Professor David
-- ChatGpt
+- ChatGpt (Looked for some references on spinner)
 
 ## Contributor
 - Karam Singh:
